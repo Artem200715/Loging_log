@@ -80,7 +80,7 @@ SQLITE_PATH=/app/data/db.sqlite3
 APP_BIND_IP=0.0.0.0
 APP_PORT=8001
 
-## Запуск контейнера
+# Запуск контейнера
 
     docker compose up -d --build
 
