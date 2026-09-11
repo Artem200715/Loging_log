@@ -65,7 +65,7 @@ Docker Compose.
     cp .env.example .env
     nano .env
 
-#В файле .env нужно заполнить:
+# В файле .env нужно заполнить:
 
 ### Django
 DJANGO_SECRET_KEY=replace-with-a-long-random-secret
