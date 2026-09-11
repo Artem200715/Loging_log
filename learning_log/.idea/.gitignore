@@ -1,0 +1,10 @@
+# Default ignored files
+/shelf/
+/workspace.xml
+.env
+.venv/
+ll_env/
+__pycache__/
+*.py[cod]
+db.sqlite3
+staticfiles/
