@@ -67,26 +67,18 @@ Docker Compose.
 
 В файле .env нужно заполнить:
 
-DJANGO_SECRET_KEY — длинный случайный ключ. Сгенерировать можно так:
+# Django
+DJANGO_SECRET_KEY=replace-with-a-long-random-secret
+DJANGO_DEBUG=False
+DJANGO_ALLOWED_HOSTS=185.123.45.67,localhost,127.0.0.1
+DJANGO_CSRF_TRUSTED_ORIGINS=
 
-    python3 -c "import secrets; print('django-insecure-' + secrets.token_urlsafe(50))"
+# База данных
+SQLITE_PATH=/app/data/db.sqlite3
 
-DJANGO_DEBUG — на сервере должно быть False.
-
-DJANGO_ALLOWED_HOSTS — список хостов через запятую. Сюда нужно
-включить IP-адрес сервера, например: 185.123.45.67,localhost,127.0.0.1
-
-DJANGO_CSRF_TRUSTED_ORIGINS — оставить пустым, так как сайт работает
-по HTTP. Если позже будет настроен HTTPS, сюда нужно будет добавить
-адрес сайта с https.
-
-SQLITE_PATH — путь к базе внутри контейнера, по умолчанию
-/app/data/db.sqlite3
-
-APP_BIND_IP — IP, на котором контейнер слушает снаружи. Чтобы
-приложение было доступно по внешнему IP сервера, указать 0.0.0.0
-
-APP_PORT — внешний порт контейнера. По умолчанию 8001
+# Порт контейнера
+APP_BIND_IP=0.0.0.0
+APP_PORT=8001
 
 ### Запуск контейнера
 
