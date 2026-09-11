@@ -17,7 +17,7 @@ COPY . .
 RUN mkdir -p /app/data
 
 # Приложение внутри контейнера принимает запросы на порту 8000.
-EXPOSE 8000
+EXPOSE 8080
 
 # Команда запуска по умолчанию. В compose.yaml она будет дополнена миграциями.
-CMD ["gunicorn", "learning_log.wsgi:application", "--bind", "0.0.0.0:8000", "--workers", "2", "--timeout", "60"]
+CMD ["gunicorn", "learning_log.wsgi:application", "--bind", "0.0.0.0:8080", "--workers", "2", "--timeout", "60"]

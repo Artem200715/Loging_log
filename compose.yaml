@@ -28,7 +28,7 @@ services:
           --timeout 60
     ports:
       # Опубликовать порт контейнера; адрес и внешний порт берутся из .env.
-      - "${APP_BIND_IP:-127.0.0.1}:${APP_PORT:-8000}:8000"
+      - "${APP_BIND_IP:-127.0.0.1}:${APP_PORT:-8080}:8080"
     volumes:
       # Хранить SQLite-базу отдельно от контейнера.
       - learning_log_data:/app/data
