@@ -65,22 +65,22 @@ Docker Compose.
     cp .env.example .env
     nano .env
 
-В файле .env нужно заполнить:
+#В файле .env нужно заполнить:
 
-# Django
+### Django
 DJANGO_SECRET_KEY=replace-with-a-long-random-secret
 DJANGO_DEBUG=False
 DJANGO_ALLOWED_HOSTS=185.123.45.67,localhost,127.0.0.1
 DJANGO_CSRF_TRUSTED_ORIGINS=
 
-# База данных
+### База данных
 SQLITE_PATH=/app/data/db.sqlite3
 
-# Порт контейнера
+### Порт контейнера
 APP_BIND_IP=0.0.0.0
 APP_PORT=8001
 
-### Запуск контейнера
+## Запуск контейнера
 
     docker compose up -d --build
 
